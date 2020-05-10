@@ -1,0 +1,78 @@
+First I execute following commands on first machine:
+  sudo /sbin/ifconfig eth1 10.0.5.1
+  sudo /sbin/ifconfig eth1 broadcast 10.0.5.255
+  sudo /sbin/ifconfig eth1 netmask 255.255.255.0
+and on the second machine following:
+  sudo /sbin/ifconfig eth1 10.0.5.2
+  sudo /sbin/ifconfig eth1 broadcast 10.0.5.255
+  sudo /sbin/ifconfig eth1 netmask 255.255.255.0
+After that /sbin/ifconfig shows me following results on first and second machine respectively:
+  eth0      Link encap:Ethernet  HWaddr 08:00:27:b0:0a:b1  
+          inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:feb0:ab1/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1596 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:929 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:120869 (118.0 KiB)  TX bytes:159763 (156.0 KiB)
+
+  eth1      Link encap:Ethernet  HWaddr 08:00:27:1f:56:9e  
+            inet addr:10.0.5.1  Bcast:10.0.5.255  Mask:255.255.255.0
+            inet6 addr: fe80::a00:27ff:fe1f:569e/64 Scope:Link
+            UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+            RX packets:27 errors:0 dropped:0 overruns:0 frame:0
+            TX packets:41 errors:0 dropped:0 overruns:0 carrier:0
+            collisions:0 txqueuelen:1000 
+            RX bytes:4559 (4.4 KiB)  TX bytes:9559 (9.3 KiB)
+
+  lo        Link encap:Local Loopback  
+            inet addr:127.0.0.1  Mask:255.0.0.0
+            inet6 addr: ::1/128 Scope:Host
+            UP LOOPBACK RUNNING  MTU:65536  Metric:1
+            RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+            TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+            collisions:0 txqueuelen:0 
+            RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+  ------------------------------------------------------------------------------------
+  eth0      Link encap:Ethernet  HWaddr 08:00:27:69:73:39  
+            inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
+            inet6 addr: fe80::a00:27ff:fe69:7339/64 Scope:Link
+            UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+            RX packets:520 errors:0 dropped:0 overruns:0 frame:0
+            TX packets:324 errors:0 dropped:0 overruns:0 carrier:0
+            collisions:0 txqueuelen:1000 
+            RX bytes:41357 (40.3 KiB)  TX bytes:37525 (36.6 KiB)
+
+  eth1      Link encap:Ethernet  HWaddr 08:00:27:9e:87:31  
+            inet addr:10.0.5.2  Bcast:10.0.5.255  Mask:255.255.255.0
+            inet6 addr: fe80::a00:27ff:fe9e:8731/64 Scope:Link
+            UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+            RX packets:33 errors:0 dropped:0 overruns:0 frame:0
+            TX packets:37 errors:0 dropped:0 overruns:0 carrier:0
+            collisions:0 txqueuelen:1000 
+            RX bytes:7359 (7.1 KiB)  TX bytes:5891 (5.7 KiB)
+
+  lo        Link encap:Local Loopback  
+            inet addr:127.0.0.1  Mask:255.0.0.0
+            inet6 addr: ::1/128 Scope:Host
+            UP LOOPBACK RUNNING  MTU:65536  Metric:1
+            RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+            TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+            collisions:0 txqueuelen:0 
+            RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+then I add line the "10.0.5.2 maszyna2" to /etc/hosts on the first machine
+  sudo vim /etc/hosts
+
+final copying on the first machine:
+  scp /etc/hosts maszyna2:/tmp/hosts
+
+and the value of /tmp/hosts on the second machine:
+  127.0.0.1       localhost
+  127.0.1.1       sikvm
+  10.0.5.2        maszyna2
+
+  # The following lines are desirable for IPv6 capable hosts
+  ::1     localhost ip6-localhost ip6-loopback
+  ff02::1 ip6-allnodes
+  ff02::2 ip6-allrouters

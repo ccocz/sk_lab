@@ -1,0 +1,17 @@
+1) destination ip: 193.0.71.130
+2) UDP
+3) Dst Port: 53 which is also Src Port in response.
+4) Transaction ID, Flags, Queries, Additional records.
+5) We can know it from Transaction ID.
+6) 3 answers
+7) www.mit.edu
+   www.mit.edu.edgekey.net
+   e9566.dscb.akamaiedge.net
+8) l.edu-servers.net.
+   g.edu-servers.net.
+9)
+  Authoritative answers can be found from:
+  eur5.akam.net	internet address = 23.74.25.64
+  use2.akam.net	internet address = 96.7.49.64
+  use5.akam.net	internet address = 2.16.40.64
+10) 104.92.92.117
