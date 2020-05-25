@@ -1,0 +1,4 @@
+/home/resul/Desktop/sik/lab/zad10/samples/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/resul/Desktop/sik/lab/zad10/samples/cmake-build-debug/CMakeFiles/server.dir
+/home/resul/Desktop/sik/lab/zad10/samples/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/resul/Desktop/sik/lab/zad10/samples/cmake-build-debug/CMakeFiles/client.dir
