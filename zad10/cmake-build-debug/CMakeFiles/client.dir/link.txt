@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/client.dir/file-le-client.c.o CMakeFiles/client.dir/err.c.o  -o client 

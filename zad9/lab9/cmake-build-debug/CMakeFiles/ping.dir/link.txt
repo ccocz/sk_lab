@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/ping.dir/err.c.o CMakeFiles/ping.dir/rawping.c.o CMakeFiles/ping.dir/in_cksum.c.o CMakeFiles/ping.dir/dropnobody.c.o  -o ping 

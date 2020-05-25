@@ -1,3 +1,0 @@
-/home/resul/Desktop/sk_lab/zad9/lab9/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/resul/Desktop/sk_lab/zad9/lab9/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/resul/Desktop/sk_lab/zad9/lab9/cmake-build-debug/CMakeFiles/ping.dir

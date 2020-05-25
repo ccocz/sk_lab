@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/server.dir/file-le-server.c.o CMakeFiles/server.dir/err.c.o  -o server 
